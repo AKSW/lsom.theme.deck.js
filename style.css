@@ -64,7 +64,11 @@ body {
             .deck-container #lsom-logo span:last-child {
                 border: solid 1px #fff;
                 padding-top: 1em;
-                -moz-border-radius: 0.12em; }
+                -moz-border-radius: 0.12em;
+                -webkit-border-radius: 0.12em;
+                -ms-border-radius: 0.12em;
+                -o-border-radius: 0.12em;
+                border-radius: 0.12em; }
     .deck-container .deck-footer {
         background: #fff;
         color: #000;
@@ -116,16 +120,16 @@ body {
             top: -2em;
             left: -2em; }
     .deck-container .slide {
-        display: block;
-        height: auto;
-        width: auto;
-        min-height: inherit;
-        padding: 5.6em 3em 2.4em 3em;
-        position: absolute;
-        top: 0;
-        right: 5em;
-        bottom: 0;
-        left: 5em;
+        display: block !important;
+        height: auto !important;
+        width: auto !important;
+        min-height: inherit !important;
+        padding: 5.6em 3em 2.4em 3em !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: 5em !important;
+        bottom: 0 !important;
+        left: 5em !important;
         overflow: hidden;
         background: #fff; }
         .deck-container .slide h1 {
@@ -137,6 +141,10 @@ body {
             margin: 0;
             padding: 0.268em 25% 0.268em 0.357em;
             -moz-transform: none !important;
+            -webkit-transform: none !important;
+            -o-transform: none !important;
+            -ms-transform: none !important;
+            transform: none !important;
             position: absolute;
             top: 2em;
             right: 0;
@@ -163,13 +171,11 @@ body {
             width: auto;
             height: auto;
             max-width: 75%;
-            max-height: 75%;
             margin-bottom: 0.5em; }
         .deck-container .slide figure {
             width: auto;
             height: auto;
-            max-width: 100%;
-            max-height: 75%; }
+            max-width: 100%; }
             .deck-container .slide figure figcaption {
                 font-size: 0.75em !important; }
     .deck-container .deck-prev-link, .deck-container .deck-next-link {
@@ -179,6 +185,10 @@ body {
         height: 1.5em;
         width: 1.5em;
         -moz-border-radius: 1.5em;
+        -webkit-border-radius: 1.5em;
+        -o-border-radius: 1.5em;
+        -ms-border-radius: 1.5em;
+        border-radius: 1.5em;
         position: fixed;
         color: #fff;
         background: #909793;

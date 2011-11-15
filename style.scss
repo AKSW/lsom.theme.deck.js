@@ -95,6 +95,10 @@ body
 	            border: solid 1px #fff;
 	            padding-top: 1em;
 	            -moz-border-radius: (3px/$fontsize) * 1em;
+	            -webkit-border-radius: (3px/$fontsize) * 1em;
+	            -ms-border-radius: (3px/$fontsize) * 1em;
+	            -o-border-radius: (3px/$fontsize) * 1em;
+	            border-radius: (3px/$fontsize) * 1em;
             }
 	    }
 	}
@@ -188,12 +192,13 @@ body
 	
 	.slide {
 	
-	    display: block;
-	    height: auto; width: auto; min-height: inherit;
-	    padding: (140px/$fontsize) * 1em 3em (60px/$fontsize) * 1em 3em;
+	    display: block !important;
+	    height: auto !important; width: auto !important; min-height: inherit !important;
+	    padding: (140px/$fontsize) * 1em 3em (60px/$fontsize) * 1em 3em !important;
 	    
-	    position: absolute;
-	    top: 0; right: 5em; bottom: 0; left: 5em;
+	    position: absolute !important;
+	    top: 0 !important; right: 5em !important;
+	    bottom: 0 !important; left: 5em !important;
 	    
 	    overflow: hidden;
 
@@ -212,6 +217,10 @@ body
 		    padding: ($fontsize/70px) * 0.75em 25% ($fontsize/70px) * 0.75em ($fontsize/70px) * 1em;
 		    
 		    -moz-transform: none !important;
+		    -webkit-transform: none !important;
+		    -o-transform: none !important;
+		    -ms-transform: none !important;
+		    transform: none !important;
 		    
 		    position: absolute;
 		    top: ($fontsize/70px) * (140px/$fontsize) * 1em;
@@ -272,7 +281,6 @@ body
 		    width: auto;
 		    height: auto;
 		    max-width: 75%;
-		    max-height: 75%;
 		    margin-bottom: 0.5em;
 		}
 		
@@ -281,7 +289,6 @@ body
 		    width: auto;
 		    height: auto;
 		    max-width: 100%;
-		    max-height: 75%;
 		    
 		    figcaption
 		    {
@@ -298,6 +305,10 @@ body
 		line-height: 1.5em;
 		height: 1.5em; width: 1.5em;
 		-moz-border-radius: 1.5em;
+		-webkit-border-radius: 1.5em;
+		-o-border-radius: 1.5em;
+		-ms-border-radius: 1.5em;
+		border-radius: 1.5em;
 		
 		position: fixed;
 		color: #fff;
