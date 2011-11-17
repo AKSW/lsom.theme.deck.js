@@ -8,7 +8,7 @@
 
 $(document).bind('deck.beforeInit', function(){
     var author     = $('meta[name=author]').attr('content');
-    var webid      = $('meta[name=webid]').attr('content');
+    var webid      = $("meta[name='dcterms.creator']").attr('content');
     var authorLink = '<a href="' + webid + '">' + author + ' | ' + webid + '</a>';
     var date       = $("meta[name='dcterms.date']").attr('content');
 
