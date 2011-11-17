@@ -20,4 +20,10 @@ $(document).bind('deck.beforeInit', function(){
         var currenttitle = $.deck('getSlide', to).find('h2').text();
         $('.title-from-current-deck').html(currenttitle);
     });
+
+    // replace "<" and ">" with their HTML entities to avoid writing it
+    $('.escape').each(function(index) {
+        $(this).text($(this).html());
+    });
 });
+
