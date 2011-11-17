@@ -10,9 +10,10 @@ $(document).bind('deck.beforeInit', function(){
     var author     = $('meta[name=author]').attr('content');
     var webid      = $('meta[name=webid]').attr('content');
     var authorLink = '<a href="' + webid + '">' + author + ' | ' + webid + '</a>';
+    var date       = $("meta[name='dcterms.date']").attr('content');
 
     $('.deck-meta-author').html(authorLink);
-    $('.deck-meta-date').html($('meta[name=date]').attr('content'));
+    $('.deck-meta-date').html(date);
     $('.deck-meta-title').html($('title').text());
 
     $(document).bind('deck.change', function(event, from, to) {
