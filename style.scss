@@ -43,6 +43,26 @@ body
 	position: relative;
 	line-height: $lineheight;
 
+	a {
+	    color: $lsomred;
+	    text-decoration: underline;
+	    
+		&:hover, &:focus, &:active {
+    	    color: $lsomred;
+		    text-decoration: none;
+		}
+	}
+	
+	&.on-slide-0 a
+	{
+	    color: #fff;
+	    text-decoration: none;
+	    
+		&:hover, &:focus, &:active {
+		    text-decoration: underline;
+		}
+	}
+	
     /* -- Helper ------------------------------------------------------- */
     
 	.hideme
