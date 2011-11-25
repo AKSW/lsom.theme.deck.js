@@ -1,10 +1,3 @@
-function loadCss(url) {
-    var link = document.createElement("link");
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = url;
-    document.getElementsByTagName("head")[0].appendChild(link);
-}
 require([
         "https://raw.github.com/imakewebthings/deck.js/b4cd21693c5bdee6096aff02e6e4e9eb9376bb58/modernizr.custom.js",
         "https://raw.github.com/imakewebthings/deck.js/master/core/deck.core.js",

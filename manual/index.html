@@ -14,10 +14,7 @@
     <meta name="viewport" content="width=1024, user-scalable=no">
 
     <!-- DeckJS requirements -->
-    <!-- script data-main="./config" src="./require-jquery.js"></script -->
-    <script data-main="../../../scripts/main" src="../../../scripts/require-jquery.js"></script>
-    <!-- link rel="stylesheet" href="https://raw.github.com/imakewebthings/deck.js/master/core/deck.core.css" -->
-    <!-- link rel="stylesheet" href="../../../deck.js/core/deck.core.css" -->
+    <script data-main="config" src="https://raw.github.com/jrburke/require-jquery/master/jquery-require-sample/webapp/scripts/require-jquery.js"></script>
     
     <!-- LSoM theme -->
     <link rel="stylesheet" href="./../style.css" id="style-theme-link" media="all">
@@ -46,10 +43,10 @@
     <p class="note">
         Please use headline <code>&lt;h2&gt;</code> for the main slide title, it is excluded automatically from the content and included in the header.
     </p>
-    
+
     <h3>Duis aute irure dolor <code>&lt;h3&gt;</code></h3>
     <h4>Reprehenderit in voluptate <code>&lt;h4&gt;</code></h4>
-    
+
     <code class="codeblock">    &lt;h2&gt;Headline for slide title&lt;/h2&gt;
     &lt;h3&gt;Sub headline 1 used on slide&lt;/h3&gt;
     &lt;h4&gt;Sub headline 2 used on slide&lt;/h4&gt;</code>
@@ -69,7 +66,7 @@
         non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
     </p>
-    
+
     <code class="codeblock">    &lt;p&gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -90,7 +87,7 @@
             </ul>
         </li>
     </ul>
-    
+
     <ol>
         <li>Ordered list <code>&lt;ol&gt;</code></li>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -100,7 +97,7 @@
             </ol>
         </li>
     </ol>
-    
+
     <code class="codeblock">    &lt;ul&gt;
         &lt;li&gt;sed do eiusmod tempor incididunt ut labore et dolore magna aliqua&lt;/li&gt;
     &lt;/ul&gt;
@@ -111,7 +108,7 @@
 
 <div class="slide" id="lists-enumeration2">
     <h2>List elements (2) &mdash; Enumeration classes</h2>
-    
+
     <code class="codeblock">&lt;ul class="bullets-none"&gt; &lt;!-- ... --&gt; &lt;/ul&gt;</code>
 
     <ul class="bullets-none">
@@ -123,7 +120,7 @@
             </ul>
         </li>
     </ul>
-    
+
     <code class="codeblock">&lt;ol class="numbers-{alpha|roman}"&gt; &lt;!-- ... --&gt; &lt;/ol&gt;</code>
 
     <ol class="numbers-alpha">
@@ -133,7 +130,7 @@
             </ol>
         </li>
     </ol>
-    
+
     <ol class="numbers-roman">
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit
             <ol>
@@ -141,7 +138,7 @@
             </ol>
         </li>
     </ol>
-    
+
 </div>
 
 <div class="slide" id="lists-definition">
@@ -156,7 +153,7 @@
         non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.</dd>
     </dl>
-    
+
     <code class="codeblock">    &lt;dl&gt;
         &lt;dt&gt;Term&lt;/dt&gt;
         &lt;dd&gt;Declaration&lt;/dd&gt;
@@ -171,9 +168,9 @@
     <p>
         In an <q>inline citation</q> you may <q cite="http://example.org/">add an author or source</q> if you want.
     </p>
-    
+
     <code class="codeblock">In an &lt;q&gt;inline citation&lt;/q&gt; you may &lt;q cite="http://example.org/"&gt;add an author or source&lt;/q&gt;</code>
-    
+
     <blockquote>
         <p>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -183,12 +180,12 @@
         </p>
         <cite>Dr. Lorem Ipsum</cite>
     </blockquote>
-    
+
     <blockquote>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </blockquote>
-    
+
     <code class="codeblock">    &lt;blockquote&gt;
         &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
         &lt;cite&gt;Source&lt;/cite&gt;
@@ -207,14 +204,14 @@
         eiusmod tempor <code>&lt;inline source code&gt;</code> incididunt
         ut labore et dolore magna aliqua.
     </p>
-    
+
     <code class="codeblock">    &lt;p&gt;
         &lt;!-- block source code --&gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor &lt;code&gt;&amp;lt;inline source code&amp;gt;&lt;/code&gt; incididunt
         ut labore et dolore magna aliqua.
     &lt;/p&gt;</code>
-    
+
     <code class="codeblock">    &lt;code class="codeblock"&gt;    &amp;lt;p&amp;gt;
         &amp;lt;!-- block source code --&amp;gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -229,7 +226,7 @@
     <p class="big">
         This is big text!
     </p>
-    
+
     <p class="note">
         This is a coloured note!
     </p>
@@ -239,7 +236,7 @@
             Combined, it is a big coloured text note!
         </p>
     </div>
-    
+
     <code class="codeblock">    &lt;p class="big"&gt;This is big text!&lt;/p&gt;
     &lt;p class="note"&gt;This is a coloured note!&lt;/p&gt;
     &lt;div class="note"&gt;
@@ -258,7 +255,7 @@
             nisi ut aliquip ex ea commodo consequat
         </figcaption>
     </figure>
-    
+
     <code class="codeblock">    &lt;figure&gt;
         &lt;img src="http://dummyimage.com/400x300" alt="alternative description"/&gt;
         &lt;figcaption&gt;
@@ -278,7 +275,7 @@
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur.
     </p>
-    
+
     <p class="righted">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -287,7 +284,7 @@
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur.
     </p>
-    
+
     <p class="justified">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -296,7 +293,7 @@
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur.
     </p>
-    
+
     <code class="codeblock">    &lt;p class="{centered|righted|justified}"&gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -309,15 +306,15 @@
     <h2>Helpers (2): Sizes</h2>
 
     <pre class="afifth">.afifth</pre>
-    
+
     <pre class="afourth">.afourth</pre>
-    
+
     <pre class="athird">.athird</pre>
-    
+
     <pre class="ahalf">.ahalf</pre>
-    
+
     <pre class="ahalf">.ahalf<pre class="ahalf">.ahalf<pre class="ahalf">.ahalf</pre></pre></pre>
-    
+
 </div>
 
 <div class="slide" id="helpers-position">
@@ -331,7 +328,7 @@
 
     <pre class="ahalf left">.left</pre>
     <pre class="ahalf right">.right</pre>
-    
+
     <br class="clear">
 
     <pre class="afifth left">.left</pre>
@@ -356,7 +353,7 @@
             nisi ut aliquip ex ea commodo consequat
         </figcaption>
     </figure>
-    
+
     <blockquote class="ahalf">
         <p>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -368,7 +365,7 @@
         </p>
         <cite>Dr. Lorem Ipsum</cite>
     </blockquote>
-    
+
     <code class="codeblock clear">    &lt;figure class="ahalf right"&gt;
         &lt;!-- ... --&gt;
     &lt;/figure&gt;
