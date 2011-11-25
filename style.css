@@ -323,6 +323,8 @@
             left: 2.75em; }
         .deck-container .deck-next-link {
             right: 1.75em; }
+        .deck-container .deck-nav-disabled {
+            display: none !important; }
         .deck-container .slide {
             /* -- Slide content ------------------------------------------------ */
             display: block !important;
