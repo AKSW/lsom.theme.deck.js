@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * Deck.js Theme
  * for Leipzig School of Media
@@ -16,23 +18,27 @@ $lineheight: 1.4;
 $lsomred: #e53434;
 $lsomgray: #909793;
 
+@import "./../_deck.minimal";
+
+@media screen, projection
+{
+
 html
 {
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 body
 {
-	font-family: $fontsans;
-	font-size:1em;
 	margin: 0;
 	padding: 0;
 }
 
 .deck-container {
 
-/* == Layout =========================================================== */
+/* == Screen Layout ==================================================== */
 
 	font-size: ($fontsize/16px) * 1em;
 	background: #eee;
@@ -81,7 +87,7 @@ body
 	    font-size: (20px/$fontsize) * 1em;
 	    font-weight: bold;
 	    text-transform: lowercase;
-	    line-height: 28/20;
+	    line-height: (28px/20px);
 	    
 	    position: absolute;
 	    right: 1em;
@@ -269,6 +275,7 @@ body
 
 	.deck-prev-link { left: 2.75em; }
 	.deck-next-link { right: 1.75em; }
+	.deck-nav-disabled { display: none !important; }
 	
 	.slide {
 	
@@ -294,38 +301,37 @@ body
 		    background: $lsomred;
 		    color: #fff;
 		    
-		    font-size: (70px/$fontsize) * 1em;
-		    font-weight: bold;
-		    line-height: $lineheight;
-		    
-		    text-align: left;
-		    
 		    margin: 0;
 		    padding: ($fontsize/70px) * 0.75em 25% ($fontsize/70px) * 0.75em ($fontsize/70px) * 1em;
-		    
-		    -moz-transform: none !important;
-		    -webkit-transform: none !important;
-		    -o-transform: none !important;
-		    -ms-transform: none !important;
-		    transform: none !important;
 		    
 		    position: absolute;
 		    top: ($fontsize/70px) * (140px/$fontsize) * 1em;
 		    right: 0;
 		    bottom: 0;
 		    left: ($fontsize/70px) * 2em;
-		    
-		    .subtitle
-		    {
-		        display: block;
-		        font-size: 0.5em;
-		        line-height: 2 * $lineheight;
-		    }
 		}		
+
+	    h2 {
+	        position: absolute;
+	        left: -5000em;
+	        top: -5000em;
+	    }
+
 	}
 }
 
+} // /media screen, projection
+
+@media all
+{
+
 /* == Typography ======================================================= */
+
+body
+{
+	font-family: $fontsans;
+	font-size:1em;
+}
 
 .slide {
 
@@ -337,18 +343,30 @@ body
 		    text-decoration: none;
 		}
 	}
-	
+
+    h1 {
+	    font-size: (70px/$fontsize) * 1em;
+	    font-weight: bold;
+	    line-height: $lineheight;
+	    
+	    text-align: left;
+	    
+	    .subtitle
+	    {
+	        display: block;
+	        font-size: 0.5em;
+	        line-height: 2 * $lineheight;
+	    }
+    }	
+
 	h2 {
 	    font-size: (26px/$fontsize) * 1em;
 	    font-weight: bold;
-	    position: absolute;
-	    left: -5000em;
-	    top: -5000em;
 	}
 
 	h3 {
 	    font-size: $lineheight * 1em;
-	    lineheight: 1;
+	    line-height: 1;
 	    margin: 1em 0 0.5em 0;
 	    font-weight: normal;
 	}
@@ -412,7 +430,7 @@ body
 	    }
 	}
 
-	code, pre
+	code, pre, kbd, samp
 	{
 	    color: #333;
 	    background: #f6f6f6;
@@ -424,6 +442,7 @@ body
 	    font-size: 0.8em;
 	    display: block;
 	    border: solid 1px #ddd;
+	    width: auto;
 	    padding: $lineheight * 0.5/0.8 * 1em;
 	    margin: 0 0 $lineheight * 0.5/0.8 * 1em 0;
 	    white-space: pre;
@@ -493,20 +512,21 @@ body
 		}
 	}
 	
-	img
-	{
-	    width: auto;
-	    height: auto;
-	    max-width: 75%;
-	    margin-bottom: 0.5em;
-	}
-	
 	figure
 	{
 	    width: auto;
 	    height: auto;
 	    max-width: 100%;
 	    
+	    img, iframe, video
+	    {
+	        display: block;
+	        width: auto;
+	        height: auto;
+	        max-width: 75%;
+	        margin: 0 auto 0.5em auto;
+	    }
+	
 	    figcaption
 	    {
 	        font-size: 0.75em !important;
@@ -584,3 +604,52 @@ body
 	
 }
 
+} // /media all
+
+
+@media print
+{
+/* == Print Layout ===================================================== */
+
+.slide
+{
+    padding: 0.5cm 0 !important;
+	page-break-inside: avoid;
+
+	h2 {
+	    font-size: $lineheight * 1em;
+	    line-height: 1;
+	    margin: 0.5em 0 1em 0;
+	    font-weight: bold;
+	}
+	
+	code.codeblock, pre
+	{
+	    white-space: pre-wrap;
+        orphans: 5;
+        widows: 5;
+	}
+}
+
+} // /media print
+
+@media print and (orientation:landscape)
+{
+
+.slide
+{
+    font-size: 1.4em;
+    page-break-after: always;
+    padding: 0 !important;
+    border: none;
+
+	h2 {
+	    padding: 0.25em 0;
+        border-style: solid none;
+        border-width: 1px;
+        border-color: black;
+	}
+	
+}
+
+}
